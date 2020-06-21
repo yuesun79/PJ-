@@ -1,0 +1,224 @@
+section {
+    width: auto;
+    display: flex;
+}
+
+aside {
+    margin: 20px 20px 20px 40px;
+    width: 15%;
+    min-width: 180px;
+
+}
+.browser-content {
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    margin: 20px;
+    width: 80%;
+    padding: 30px;
+}
+
+/*边栏的搜索栏*/
+aside div.hot-thing a {
+    text-decoration: none;
+}
+.search-bar {
+    border: none;
+    height: 90px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.search-bar form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/*边栏的热门*/
+
+.hot-thing div {
+    width: 100%;
+    text-align: center;
+    background-color: #3b3b3b;
+    position: relative;
+}
+
+.hot-thing a {
+    display: block;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    border-bottom: rgba(136, 136, 136, 0.65) 0.3px solid;
+    cursor: pointer;
+}
+
+.hot-thing div a{
+    text-decoration: none;
+    display: inline;
+    background-size: 1.1rem;
+    padding: 0 1.5rem;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.hot-thing img.tip {
+    position: absolute;
+    top: 0.7rem;
+    right: -1rem;
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.first-hot {
+    background-image: url("../../images/icon/热门.png");
+}
+
+.second-hot {
+    background-image: url("../../images/icon/国家.png");
+}
+
+.third-hot {
+    background-image: url("../../images/icon/城市.png");
+}
+
+.hot-thing a:hover {
+    background-color: rgba(220, 220, 220, 0.74);
+}
+
+.hot-thing a:only-of-type:hover {
+    background-color: #787878;
+}
+
+.hot-thing {
+    margin: 10px 0;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+}
+
+/*主体内容*/
+
+.filter {
+    display: flex;
+    text-align: center;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.filter select,.filter input {
+    display: inline-block;
+    width: 160px;
+    height: 36px;
+    margin: 0 40px 10px 40px;
+    font-size: 1rem;
+}
+
+.filter select {
+    text-align: center;
+    text-align-last: center;
+}
+
+.filter option {
+    text-align: center;
+}
+
+.filter input {
+    border: none;
+    border-radius: 6px;
+    background-color: #3b3b3b;
+    color: white;
+}
+
+/*热门图片*/
+
+.hot-figures {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.hot-figures figure {
+    box-shadow: gray 0 0 10px;
+    width: 220px;
+    height: 220px;
+    margin: 20px;
+}
+
+.hot-figures img {
+    background-color: rgba(255, 178, 95, 0.6);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 420px) {
+    .search {
+        margin: 0 40px;
+    }
+
+    section {
+        flex-flow: column nowrap;
+    }
+
+    aside {
+        width: 100%;
+        margin: 0;
+    }
+
+    .small-screen {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+    }
+
+    .hot-thing div a {
+        padding: 0 0.6rem 0 1.1rem;
+        margin-left: 0.5rem;
+        background-repeat: no-repeat;
+        color: white;
+    }
+
+    .browser-content {
+        margin: 0;
+        border: none;
+        width: 100%;
+    }
+
+    .filter {
+        margin: 0;
+    }
+
+    .filter select,.filter input {
+        margin: 0 10px 10px 10px;
+    }
+
+    .filter select {
+        border-radius: 6px;
+    }
+
+    .hot-figures figure {
+        margin: 20px 0;
+        width: 300px;
+        height: 300px;
+        padding: 0;
+    }
+
+    .hot-figures figure:first-of-type {
+        margin-top: 30px;
+    }
+
+}
+
+.page {
+    color: #888888;
+    text-align: center;
+    padding: 20px 0;
+    text-shadow: 2px 2px 3px #999999;
+}
+
+.page span {
+    color: black;
+}

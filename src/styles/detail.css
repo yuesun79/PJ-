@@ -1,0 +1,165 @@
+* {
+    line-height: 1.4rem;
+}
+
+figure {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    height: auto;
+}
+div.row {
+    padding: 0 20px;
+    width: 100%;
+}
+
+/*图片*/
+
+figure img {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    padding-bottom:20px;
+}  /*还算比较重要 让它显示本来大小*/
+
+/*右侧信息*/
+
+figcaption {
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0;
+
+}
+
+.author {
+    color: #b8b8b8;
+    display:inline-block;
+    margin-left: 2rem;
+
+}
+
+/*下面具体描述*/
+
+section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin: 0;
+}
+
+.description {
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    margin: 0  15px 60px 15px;
+    padding: 20px;
+}
+
+
+@media (max-width: 1100px) {
+    .description {
+        margin: 0 5% 60px 5%;
+    }
+
+    figure img {
+        padding: 60px 0;
+        width: 90vw;
+    }
+
+    figcaption {
+        width: 90%;
+        margin: 0 5% 40px 5%;
+        display: flex;
+        justify-content: space-around;
+        padding: 5px 5px 20px 5px;
+    }
+
+    figcaption div {
+        margin: 0 40px;
+    }
+
+    #like-button input {
+        margin: 35px 0;
+    }
+}
+
+@media (max-width: 740px) {
+    figcaption div {
+        margin: 0;
+    }
+}
+
+@media (max-width: 560px) {
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        line-height: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    figcaption {
+        flex-flow: row wrap;
+        padding: 0;
+    }
+
+    figcaption div {
+        width: 50%;
+        text-align: center;
+    }
+
+    #like-button input {
+        margin:0;
+    }
+
+    figure img {
+        padding: 40px 0;
+    }
+}
+
+figcaption div {
+    padding: 10px;
+}
+
+h2 {
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: center;
+}
+
+.hate {
+    background-image: url("../../images/icon/不感兴趣.png")
+}
+
+.like {
+    background-image: url("../../images/icon/爱心.png")
+}
+
+.hate,.like {
+    background-size: 1.5rem;
+    background-position: center left;
+    background-repeat: no-repeat;
+    text-indent: 2rem;
+}
+
+input[type='button'] {
+    margin: 10px -5px;
+    border: none;
+    background-color: indianred;
+    border-radius: 5px;;
+    color: white;
+    height: 2.5rem;
+    width: 8rem;
+    text-align: center;
+
+}
+input[type='button']:hover {
+    background: rgba(205, 92, 92, 0.65);
+    border-color: indianred;
+}
+
+
+
+

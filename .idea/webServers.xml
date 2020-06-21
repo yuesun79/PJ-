@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="793f8495-8b55-4672-ae4e-8effa2c95322" name="pj2" url="http://localhost:63342">
+        <fileTransfer port="0" mountedRoot="$PROJECT_DIR$" accessType="MOUNT" />
+      </webServer>
+      <webServer id="3e6b7760-91e5-4bec-9e04-2993d61506bb" name="php" url="http://localhost:63342">
+        <fileTransfer port="0" mountedRoot="$PROJECT_DIR$/src/php" accessType="MOUNT" />
+      </webServer>
+      <webServer id="c419513b-8228-49a2-9eef-b383e0d36176" name="PJ2" url="http://39.100.251.172">
+        <fileTransfer host="39.100.251.172" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
