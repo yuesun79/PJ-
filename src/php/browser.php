@@ -168,7 +168,6 @@
         echo '
             <figure>
                 <a href="detailPage.php?id=' . $row['ImageID'] . '" target="_Blank"><img src="../../travel-images/medium/' . $row['PATH'] . '" alt="' . $row['Title'] . '"></a>
-                <figcaption></figcaption>
             </figure>
         ';
     }

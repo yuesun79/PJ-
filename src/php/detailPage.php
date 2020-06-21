@@ -91,7 +91,6 @@
                             ?>
                         </p>
                         <p class="like"><?php echo $row['Likes']; ?></p>
-                        <p class="hate">7 不感兴趣</p>
                     </div>
                     <div>
                         <h2>图片详情</h2>

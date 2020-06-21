@@ -41,7 +41,7 @@ ajax将图片保存到文件夹与数据库
 $('#form2').submit(function (e) {
     e.preventDefault();
     let data = new FormData(this);
-    if ($('#box').data("id")) {
+    if (typeof($("#box").data("id")) !=="undefined") {
             data.append('ImageID',$('#box').data("id"));
     }
 

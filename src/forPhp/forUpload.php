@@ -22,7 +22,7 @@ try {
     $type = array("jpg", "gif", 'png', 'bmp','jpeg');//允许选择的图片类型
     $ext = explode(".", $file_name);//拆分获取图片名
     $ext = $ext[count($ext) - 1];//取图片的后缀名
-    if (in_array($ext,$type)){
+    if (in_array($ext,$type) || isset($_POST['ImageID'])){
         do{
             $new_name = get_file_name(6).'.'.$ext;//全是中文会报错
             $path='../../travel-images/medium/'.$new_name;//upload为目标文件夹
@@ -35,11 +35,12 @@ try {
         $country = ($pdo->query($sql))->fetch()?($pdo->query($sql))->fetch()['ISO']:null;
         $sql = 'SELECT UID FROM traveluser WHERE UserName ="' . $_SESSION['Username'] . '"';
         $author = ($pdo->query($sql))->fetch()?($pdo->query($sql))->fetch()['UID']:null;
+
         if (!isset($_POST['ImageID'])) {
             $sql = 'INSERT INTO travelimage (Title, Description, CityCode, CountryCodeISO, UID, PATH, Content, Likes) VALUES ("' . $_POST['title'] . '","' . $_POST['description'] . '",' . $city . ',"' . $country . '",' . $author . ',"' . $new_name . '","' . $_POST['content'] . '",0)';
         }
         else {
-            $sql = 'UPDATE travelimage SET Title="' . $_POST['title'] . '", Description="' . $_POST['description'] . '", Citycode =' . $city . ', CountryCodeISO="' . $country . '", PATH="' . $new_name . '", Content="' . $_POST['content'] . '", Likes=0 WHERE ImageID=' . $_POST['ImageID'];
+            $sql = 'UPDATE travelimage SET Title="' . $_POST['title'] . '", Description="' . $_POST['description'] . '", CityCode =' . $city . ', CountryCodeISO="' . $country . '", Content="' . $_POST['content'] . '", Likes=0 WHERE ImageID=' . $_POST['ImageID'];
         }
         $result = $pdo->exec($sql);
         if ($result){

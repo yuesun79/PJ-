@@ -15,7 +15,6 @@ $('#like-button').click(function() {
     };
     xmlhttp.open("POST","../forPhp/like.php",true);
     xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-    alert($(this).children('input').attr('id'));
     xmlhttp.send("imageID="+$(this).children('input').attr('id'));
 
 }
